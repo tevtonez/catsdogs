@@ -24,4 +24,7 @@ urlpatterns = [
     #api
     url(r'^api/', include('catsdogs_api.urls')),
 
-]# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+# Adding media to URLs
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
