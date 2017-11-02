@@ -19,10 +19,6 @@ class CatViewSet(viewsets.ModelViewSet):
     queryset = models.Cat.objects.all()
     permission_classes = (permissions.UpdateOwnAnimal, IsAuthenticated)
 
-    def perform_create(self, serializer):
-        """Sets the user profile to the logged in user."""
-
-        serializer.save(animal_owner=self.request.user)
 
 
 class DogViewSet(viewsets.ModelViewSet):
@@ -31,9 +27,4 @@ class DogViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.DogSerializer
     queryset = models.Dog.objects.all()
     permission_classes = (permissions.UpdateOwnAnimal, IsAuthenticated)
-
-    def perform_create(self, serializer):
-        """Sets the user profile to the logged in user."""
-
-        serializer.save(animal_owner=self.request.user)
 

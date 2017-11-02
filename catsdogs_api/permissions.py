@@ -6,4 +6,4 @@ class UpdateOwnAnimal(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
 
-        return obj.animal_owner.id == request.user.id
+        return obj.animal_owner == request.user

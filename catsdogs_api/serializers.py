@@ -12,7 +12,7 @@ class CatSerializer(serializers.ModelSerializer):
 
 
 class DogSerializer(serializers.ModelSerializer):
-    """Serializes a cat"""
+    """Serializes a dog"""
     class Meta:
         model = models.Dog
         fields = ('id', 'animal_owner', 'dog_name', 'dog_bd')
