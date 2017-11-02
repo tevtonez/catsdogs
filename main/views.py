@@ -20,7 +20,3 @@ class SignUpView(CreateView):
 
 class IndexView(TemplateView):
     template_name = 'index.html'
-
-
-class mainIndexView(TemplateView):
-    template_name = 'main/base.html'

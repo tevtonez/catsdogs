@@ -12,7 +12,6 @@ from catsdogs_api import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', main_views.IndexView.as_view(), name='home'),
-    url(r'^main/$', main_views.mainIndexView.as_view(), name='main'),
 
     # logging users in/out
     url(r'^login/$', auth_views.login, {'template_name': 'main/login.html'}, name='login'),
