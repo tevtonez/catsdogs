@@ -35,7 +35,6 @@ if DJANGO_MODE == 'local':
 else:
 	ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
-
 # Application definition
 
 INSTALLED_APPS = [
